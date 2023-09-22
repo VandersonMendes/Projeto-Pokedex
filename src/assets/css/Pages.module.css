@@ -1,0 +1,29 @@
+.PagesFlex{
+    display: flex;
+    gap: 3rem;
+    margin: 2rem;
+    justify-content: center;
+}
+.PagesFlex button{
+    background-color: rgb(0, 119, 255);
+    color: #fff;
+    padding: 0.5rem;
+    font-family: "Poppis";
+    font-size: 1.1rem;
+    cursor: pointer;
+    border-radius: 12px;
+    outline: none;
+    border: none;
+    transition: 200ms ease-in;
+}
+.PagesFlex button:hover{
+    transform: scale(1.040);
+    transition: 200ms ease-in;
+    opacity: 0.9;
+}
+@media (max-width:400px) {
+    .PagesFlex button{
+        font-size: 0.6rem;
+  
+    }
+}

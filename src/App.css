@@ -1,0 +1,55 @@
+@font-face {
+    font-family:"Poppis";
+    src: url("./assets/fonts/Poppins-Medium.ttf");
+}
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+body{
+  background-color: lightcyan;
+    overflow-x: hidden;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+h1,h2,h3, span, li{
+    font-family: "Poppis";
+}
+
+img{
+    width: 100%;
+    height: 100%;
+}
+.animeLeft {
+  opacity: 0;
+  transform: translateX(-20px);
+  animation: animeLeft 1s forwards;
+}
+li,a{
+  list-style: none;
+  color: initial;
+  text-decoration: none;
+}
+
+
+@media (max-width:700px) {
+  .navBar{
+    display: none;
+    animation: animeLeft 400s forwards;
+  }  
+ 
+  .navBar.open{
+    display: block;
+    animation: animeLeft 1s forwards;
+    z-index: 2000;
+  }  
+}
+@keyframes animeLeft {
+  to {
+    opacity: 1;
+    transform: initial;
+  }
+}

@@ -1,0 +1,214 @@
+.containerModal{
+    position: fixed;
+    top: -10rem;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 1000;
+    cursor: pointer;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+}
+.animeTop {
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: animeTop 1s forwards;
+  }
+  @keyframes animeTop {
+    to {
+      opacity: 1;
+      transform: initial;
+    }
+  }
+
+.modal{
+    display: flex;
+    gap: 5vw;
+    background-color: bisque;
+    margin: 5rem auto;
+    max-width: 1200px;
+    width: 100%;
+    height: 50%;
+    cursor: initial;
+    border-radius: 15px;
+    position: relative;
+}
+.img{
+    align-items: center;
+}       
+.img img{
+    max-width: 20rem;
+    max-height: 20rem;
+    margin: 25% 2rem;
+    cursor: pointer;
+    background-color: aliceblue;
+    border-radius: 20px;
+    padding: 2rem;
+}
+.exit{
+    position: absolute;
+    right: -10px;
+    top:-1rem;
+    padding: 0.5rem 1.5rem;
+    background-color: red;
+    color: white;
+    font-weight: 900;
+    font-size: 1.4rem;
+    border: 2px solid rgb(121, 0, 0);
+    cursor: pointer;
+}
+
+.text .name{
+    font-size: 2.5rem;
+    margin-top: 2rem;
+}
+.text{
+    margin-right: 2rem;
+}
+.id{
+    position: absolute;
+    left: 2rem;
+    top: 1rem;
+    font-size: 2.5rem;
+    color: rgba(63, 59, 59, 0.822);
+}
+.typeFlex,
+.abilitiesFlex,
+.weaknessFlex {
+    display: flex;
+    gap: 1vw;
+    cursor: pointer;
+    flex-wrap: wrap;
+}
+
+.typeFlex span,
+.abilitiesFlex span,
+.weaknessFlex span{
+    padding: 0.1rem 1rem;
+    border-radius: 5px;
+    font-weight: 600;
+    margin: 1rem 0;
+}
+.abilitiesFlex span{
+    background-color: rgb(7, 207, 24);
+    color: #ffff;
+    border: 2px solid rgb(12, 173, 12);
+}
+.weaknessFlex span{
+    background-color: rgb(207, 30, 7);
+    color: #ffff;
+    border: 2px solid rgb(110, 2, 2);
+}
+.typeFlex span{
+    color: #000000;
+    border: 2px solid rgb(110, 2, 2);
+}
+
+.stats{
+    margin: 2rem 0;
+    border: 2px solid rgb(133, 130, 130);
+    background-color:#bebdc374 ;
+    padding: 1rem;
+    width:100%;
+    border-radius: 20px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    align-items: flex-end;
+}
+.stats li{
+    list-style: none;
+    margin-bottom: 1rem;
+}
+.progress{
+    width: 100%;
+    background-color: rgba(243, 163, 241, 0.454);
+    align-items: center;
+    border-radius: 10px;
+}
+.progressWidth{
+    height: 20px;
+    background-color: #9d47ee;
+    border-radius: 10px;
+}
+.statsName{
+    font-family: "Poppis";
+    font-size: 1rem;
+    transition: 1s all;
+}
+
+@media (max-width:900px) {
+    .stats{
+        margin-right: 2rem;
+    }
+    .modal{
+        gap: 10vw;
+        width: 100%;
+        height: 40%;
+    }
+}
+@media (max-width:800px) {
+    .img img{
+        max-width: 20rem;
+        max-height: 20rem;
+        margin: 15% 2rem;
+        cursor: pointer;
+        background-color: aliceblue;
+        border-radius: 20px;
+        padding: 2rem;
+    }
+    .modal{
+        flex-direction: column;
+    }
+    .img img{
+        max-width: 15rem;
+        max-height: 15rem;
+    }
+    .modal{
+        align-items: center;
+        height: 60%;
+        gap: 5vw;
+    }
+    .id{
+        font-size: 2rem;
+    }
+    modal{
+        width: 100%;
+        height: 100%;
+    }
+}
+@media (max-width:500px) {
+    .id{
+        font-size: 1.5rem;
+    }
+    .stats{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .text{
+        margin-left: 1rem;
+    }
+    .img img{
+        max-width: 10rem;
+        max-height: 10rem;
+        margin-top: 4rem;
+
+    }
+    .modal{
+        width: 100%;
+        height: 80%;
+    }
+    .exit{
+        position: absolute;
+        right: 5px;
+        top:-1rem;
+        padding: 0.2rem 1rem;
+    }
+}
+@media (max-width:350px) {
+    .modal{
+        width: 100%;
+        height: 45%;
+    }
+}
